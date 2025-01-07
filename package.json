@@ -16,7 +16,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -r git@github.com:DLang42/DLang42.github.io.git",
     "clean": "rm -rf build node_modules && npm install"
   },
   "eslintConfig": {
