@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <!-- <div id="navBar"> -->
+        <a href="#home" class="nav-item">Home</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#contact" class="nav-item">Contact</a>
+        <!-- </div> -->
+    </header>
+    <main class="bodyDiv">
+        <!-- Main project information -->
+        <article>
+            <h1 class="center">Wordle</h1>
+            <p class="big-text">Recreation of the popular word guessing game via command line</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wQKLmQ_c_5Q?si=NbTjucp8uQ2UZ1Rw"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+            
+            <!-- <p class="big-text">Tech stack/Technologies used: C</p> -->
+            <p class="center-text">Wordle is a word game where each day, a five letter word is randomly chosen from a word bank and the player must guess the word within six guesses. <a href="https://www.wikihow.com/Play-Wordle">Learn more about how the game works</a>. My project is a rendition of the popular word game with a slight variation to the functionality.</p>
+<h1>Design</h1>
+<h3>Tech stack</h3>
+<p>The codebase is in C</p>
+<h3>Components</h3>
+<p>The project guidelines require four components total, along with their dependencies as displayed in the figure below. Information with regards to each component will be listed below the figure, along with an indication of code provided.</p>
+<p><img src="https://user-images.githubusercontent.com/47933368/179664327-98298f87-ae6d-45aa-82d4-0e50be1164c8.png" alt="image"></p>
+<ul>
+<li>The <em><strong>lexicon</strong></em> component is responsible for integrating the dictionary of valid words the player can guess and it chooses the word the player will have to guess. This component also checks to see if the provided dictionary has no duplicates, no uppercase words, and only words consisting of only 5 letters.</li>
+<li>The <em><strong>io</strong></em> component is responsible for handling the input and output for the game. This component will read in a player’s input and help output the letters in the correct color.</li>
+<li>The <em><strong>history</strong></em> component is responsible for reporting the score after a game is successfully played. This component will create the scores.txt file containing the scores of each game played and will update it each time another game is successfully completed.</li>
+<li>The <em><strong>wordle</strong></em> component is responsible for starting the game and interacting with the player. This component works with lexicon, io, and history to fully recreate the wordle experience.</li>
+</ul>
+<h3>Additional Information</h3>
+<p>The project does not use memory allocation nor strings.</p>
+<h1>Implementation</h1>
+<p>The implementation of this project utilized the following techniques and decisions:</p>
+<ul>
+<li>Due to the need to store a large number of words in the word list while also not using memory allocation, a large array is favored here, as the word lists can only have a maximum capacity of 100,000 words.</li>
+<li>The time library is used as a seed if no seed value is given to randomize the word that must be guessed each time the user plays the game.</li>
+<li>In order to determine the coloring of the letters, a color algorithm is designed with the idea of using a color array to determine the actual character color in addition to a yellow character array that stores all of the yellow characters determined from a word. The color algorithm fills the character color array by first searching for matching characters at matching indices to determine if any should be colored green. Then, the algorithm will compare the guess with the actual word letters to determine if any of the characters should be colored yellow. Finally, the rest of the letters are colored black.</li>
+<li>Hex codes are used to give the guess word appropriate colors akin to Wordle.</li>
+<li>As an addition to the game, there is a history tracker that keeps track of the number of guesses it took for the player to guess the word correctly. Instead of limiting the number of guesses to six, the user is allowed an unlimited number of guesses.</li>
+</ul>
+<h1>Result</h1>
+<p>While there may not be a GUI to resemble the actual game, it is a faithful recreation of the actual game in command line. Moreover, the game can be played as many times as the user wishes without needing to wait for the next day to guess a new word.</p>
+<p>Overall, I've learned how to read and write files in C and how to work with individual characters instead of strings in C. I've found this to be fun to implement as a homemade version of Wordle.</p>
+
+        </article>
+    </main>
+    <footer>
+        <p id="content" style="text-align: center;">Want to get in touch? Message me at <a rel="noreferrer noopener"
+                href="mailto:dylan.hk.lang@gmail.com" class="links">dylan.hk.lang@gmail.com</a>!</p>
+        <p id="content" style="text-align: center;">&copy; 2021 - 2025 Dylan Lang</p>
+    </footer>
+</body>
+
+</html>
