@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <header>
+        <!-- <div id="navBar"> -->
+        <a href="#home" class="nav-item">Home</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#contact" class="nav-item">Contact</a>
+        <!-- </div> -->
+    </header>
+    <main class="bodyDiv">
+        <h1 class="center">Home</h1>
+        <p>Hello, welcome to Dylan Lang's home page. This website is currently a work in progress. Check back for more
+            updates in the future!</p>
+        <h1 class="center">Projects</h1>
+        <p class="center-text">Check out some of my projects below:</p>
+        <!-- Outer div -->
+        <div>
+            {% for project in collections.projects %}
+            <!-- Clickable cards -->
+            <a href="{{project.url}}" class="card-link">
+                <div class="card">
+                    <!-- <img src="{{ project.data.image }}" alt="{{ project.data.title }} screenshot" class="project-image"> -->
+                    <h2 class="center">{{ project.data.title }}</h2>
+                    {% if project.data.video %}
+                    <div>
+                    <iframe width="560" height="315" src="{{ project.data.video }}" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    {% endif %}
+                    <!-- <caption class="center-text">Tech stack: {{ project.data.techStack }}</caption> -->
+                    <p class="center-text">{{ project.data.caption }}</p>
+                </div>
+            </a>
+            <!-- <p><a href="{{ project.link }}" class="links">Project Link</a></p> -->
+            {% endfor %}
+        </div>
+        <h1 class="center">About</h1>
+        <p class="center-text">Hey there! I'm Dylan, a software engineer who can work both backend and frontend of
+            full-stack applications.
+            I built this portfolio from scratch to showcase projects and to hone my frontend development skills. Here's
+            a tidbit of my experience:</p>
+        <ul>
+            <li><strong>Projects:</strong> Aside from the projects listed above, I've worked on an internal reporting
+                tool built in Python to streamline the deployment process of other projects that pings environment
+                endpoints for each project. I've also worked on a full-stack application built using Java and Angular to
+                garner more traffic to Fidelity's digital ecosystem.</li>
+            <li><strong>Languages:</strong> Java, Python, JavaScript, TypeScript, HTML/CSS, Gherkin, C, C++, Angular,
+                React, Vue, SQL</li>
+            <li><strong>Technologies:</strong> Jenkins, JUnit, Git, GitHub, Windows, Linux, Cucumber, GCP, Postman,
+                Docker, MySQL</li>
+            <li><strong>Currently studying:</strong> Machine learning, full-stack development, and cloud computing</li>
+            <li><strong>Interests:</strong> I like gaming, reading, listening to horror stories, and learning 3d
+                modeling in Blender!</li>
+        </ul>
+    </main>
+    <footer>
+        <p id="content" style="text-align: center;">Want to get in touch? Message me at <a rel="noreferrer noopener"
+                href="mailto:dylan.hk.lang@gmail.com" class="links">dylan.hk.lang@gmail.com</a>!</p>
+        <p id="content" style="text-align: center;">&copy; 2021 - 2025 Dylan Lang</p>
+    </footer>
+</body>
+
+</html>
