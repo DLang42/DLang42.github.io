@@ -1,0 +1,27 @@
+name: Eleventy Build and Deploy
+
+on:
+  push:
+    branches:
+      - main # Triggers the workflow on pushes to the main branch
+
+jobs:
+  build_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm ci # Use npm ci to install dependencies defined in package.json
+
+      - name: Build Eleventy site
+        run: npm run build # Runs your defined build command (e.g., "npx @11ty/eleventy")
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site # The default output directory for Eleventy
+          publish_branch: gh-pages # The branch to deploy the built files to
