@@ -23,19 +23,20 @@
             <h1 class="center">{{ title }}</h1>
             <p class="big-text">{{ caption }}</p>
             {% if video %}
-            <iframe width="560" height="315" src="{{ video }}"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+            <div class="video-container">
+                <iframe src="{{ video }}" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
             {% endif %}
             <!-- <p class="big-text">Tech stack/Technologies used: {{techStack}}</p> -->
             {{content}}
         </article>
     </main>
     <footer>
-        <p id="content" style="text-align: center;">Want to get in touch? Message me at <a rel="noreferrer noopener"
+        <p id="content" class="center-text">Want to get in touch? Message me at <a rel="noreferrer noopener"
                 href="mailto:dylan.hk.lang@gmail.com" class="links">dylan.hk.lang@gmail.com</a>!</p>
-        <p id="content" style="text-align: center;">&copy; 2021 - 2025 Dylan Lang</p>
+        <p id="content" class="center-text">&copy; 2021 - 2025 Dylan Lang</p>
     </footer>
 </body>
 

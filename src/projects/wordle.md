@@ -18,7 +18,7 @@ The codebase is in {{techStack}}
 
 The project guidelines require four components total, along with their dependencies as displayed in the figure below. Information with regards to each component will be listed below the figure, along with an indication of code provided.
 
-![image](https://user-images.githubusercontent.com/47933368/179664327-98298f87-ae6d-45aa-82d4-0e50be1164c8.png)
+![image](https://user-images.githubusercontent.com/47933368/179664327-98298f87-ae6d-45aa-82d4-0e50be1164c8.png) 
 
 * The ***lexicon*** component is responsible for integrating the dictionary of valid words the player can guess and it chooses the word the player will have to guess. This component also checks to see if the provided dictionary has no duplicates, no uppercase words, and only words consisting of only 5 letters.
 * The ***io*** component is responsible for handling the input and output for the game. This component will read in a player’s input and help output the letters in the correct color.
