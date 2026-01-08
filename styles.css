@@ -6,12 +6,12 @@
 header {
     background-color: rgb(var(--primary-color));
     overflow: hidden;
-    display: flex; 
+    display: flex;
     justify-content: flex-end;
     width: 100%;
     box-sizing: border-box;
     position: fixed;
-    margin: 0 auto;
+    margin: 0;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -24,25 +24,37 @@ header {
 footer {
     background-color: rgb(var(--primary-color));
     /* text-align: center; */
-    padding: 10px 0;
-    /* position: fixed; */
+    padding: 10px;
     /* bottom: 0; */
-    width: 100%;
     /* left: 0; */
     overflow: hidden;
     margin: 0;
+    width: 100%;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
 main {
-    display: black;
+    display: block;
     unicode-bidi: isolate;
     margin-top: 2em;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    flex: 1;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        display: black;
+        unicode-bidi: isolate;
+        margin-top: 2em;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 .card-link {
@@ -58,14 +70,16 @@ main {
     /* user-select:s none; */
     /* display: block; */
     /* text-decoration: none; */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
     padding: 20px;
     margin: 15px;
     border-radius: 8px;
 }
 
-h1, p, li {
+h1,
+p,
+li {
     color: #E0E0E0;
 }
 
@@ -73,8 +87,18 @@ li {
     margin-bottom: 1em;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
-    background-color: var(--secondary-color );
+    background-color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .links {
@@ -111,10 +135,27 @@ body {
 }
 
 .center {
-    display: flex; 
+    display: flex;
     justify-content: center;
 }
 
 .center-text {
     text-align: center;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%; /* Prevents overflow on larger screens */
+  margin: 0 auto; /* Centers the container */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
