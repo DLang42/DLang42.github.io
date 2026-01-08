@@ -33,7 +33,7 @@
             <p class="center-text">Wordle is a word game where each day, a five letter word is randomly chosen from a word bank and the player must guess the word within six guesses. <a href="https://www.wikihow.com/Play-Wordle">Learn more about how the game works</a>. My project is a rendition of the popular word game with a slight variation to the functionality.</p>
 <h1>Design</h1>
 <h3>Tech stack</h3>
-<p>The codebase is in C</p>
+<p>The codebase is in C.</p>
 <h3>Components</h3>
 <p>The project guidelines require four components total, along with their dependencies as displayed in the figure below. Information with regards to each component will be listed below the figure, along with an indication of code provided.</p>
 <p><img src="https://user-images.githubusercontent.com/47933368/179664327-98298f87-ae6d-45aa-82d4-0e50be1164c8.png" alt="image"></p>
@@ -53,6 +53,7 @@
 <li>In order to determine the coloring of the letters, a color algorithm is designed with the idea of using a color array to determine the actual character color in addition to a yellow character array that stores all of the yellow characters determined from a word. The color algorithm fills the character color array by first searching for matching characters at matching indices to determine if any should be colored green. Then, the algorithm will compare the guess with the actual word letters to determine if any of the characters should be colored yellow. Finally, the rest of the letters are colored black.</li>
 <li>Hex codes are used to give the guess word appropriate colors akin to Wordle.</li>
 <li>As an addition to the game, there is a history tracker that keeps track of the number of guesses it took for the player to guess the word correctly. Instead of limiting the number of guesses to six, the user is allowed an unlimited number of guesses.</li>
+<li>An option for players to quit guessing the current word has been added as a safe way to terminate the game.</li>
 </ul>
 <h1>Result</h1>
 <p>While there may not be a GUI to resemble the actual game, it is a faithful recreation of the actual game in command line. Moreover, the game can be played as many times as the user wishes without needing to wait for the next day to guess a new word.</p>

@@ -12,7 +12,7 @@ Wordle is a word game where each day, a five letter word is randomly chosen from
 # Design
 
 ### Tech stack
-The codebase is in {{techStack}}
+The codebase is in {{techStack}}.
 
 ### Components
 
@@ -36,6 +36,7 @@ The implementation of this project utilized the following techniques and decisio
 * In order to determine the coloring of the letters, a color algorithm is designed with the idea of using a color array to determine the actual character color in addition to a yellow character array that stores all of the yellow characters determined from a word. The color algorithm fills the character color array by first searching for matching characters at matching indices to determine if any should be colored green. Then, the algorithm will compare the guess with the actual word letters to determine if any of the characters should be colored yellow. Finally, the rest of the letters are colored black.
 * Hex codes are used to give the guess word appropriate colors akin to Wordle.
 * As an addition to the game, there is a history tracker that keeps track of the number of guesses it took for the player to guess the word correctly. Instead of limiting the number of guesses to six, the user is allowed an unlimited number of guesses.
+* An option for players to quit guessing the current word has been added as a safe way to terminate the game.
 
 # Result
 While there may not be a GUI to resemble the actual game, it is a faithful recreation of the actual game in command line. Moreover, the game can be played as many times as the user wishes without needing to wait for the next day to guess a new word. 

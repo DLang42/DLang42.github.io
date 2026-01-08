@@ -70,11 +70,16 @@ main {
     /* user-select:s none; */
     /* display: block; */
     /* text-decoration: none; */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px #008080;
     transition: transform 0.2s, box-shadow 0.2s;
     padding: 20px;
     margin: 15px;
     border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px #00BFBF;
 }
 
 h1,
