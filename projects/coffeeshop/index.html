@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- <script src="./navigation.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <!-- <div id="navBar"> -->
+        <a href="#home" class="nav-item">Home</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#contact" class="nav-item">Contact</a>
+        <!-- </div> -->
+    </header>
+    <main class="bodyDiv">
+        <!-- Main project information -->
+        <article>
+            <h1 class="center">Coffee Shop</h1>
+            <p class="big-text">Coffee Shop system for ordering and serving coffee</p>
+            
+            <!-- <p class="big-text">Tech stack/Technologies used: Java with Spring Boot, Angular, and MySQL</p> -->
+            <p>The Coffee Shop project is designed to simulate a coffee shop. It is a GrubHub lite esque application that allows for authentication &amp; authorization, ordering coffee, fulfilling orders, viewing order history, adding ingredients, adding recipes, and viewing revenue earned.</p>
+<h1>Design</h1>
+<h3>Tech Stack</h3>
+<p>The codebase is comprised of Java with Spring Boot, Angular, and MySQL.</p>
+<h1>User Guide</h1>
+<h2>Sign up</h2>
+<p>Upon starting the application you will be directed to the login page. However, before you can log in you will need to sign up with a user account in order to access the application. Click “Don’t have an account? Sign up” on the login form in order to view the sign up form.</p>
+<ul>
+<li>
+<h3>Successful Sign up</h3>
+</li>
+</ul>
+<p>On the sign up form, you will need to provide a few essential pieces of information to register an account: <em>Username</em>, <em>Password</em>, and <em>Role</em>. For selecting a role, a user can select <em>Customer</em>, <em>Barista</em>, or _Manager _from the drop-down menu. Enter the required information in the sign up form and click the “Sign Up” button. Upon successful sign up you will see a message stating “Account Created Successfully”.</p>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/0ba850f8-36d5-4e8e-b682-fc1555145a9f" alt="image"><br>
+<img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/d1c8676c-0cc5-465c-b0b6-f65835870369" alt="image"></p>
+<ul>
+<li>
+<h3>Unsuccessful Sign up: User already exists</h3>
+</li>
+</ul>
+<p>After entering the required information to register a user account, if you see an error message stating &quot;Error: User with username [your user] already exists.&quot; that means your username was not unique and in order to register an account, you must choose a username that has not been already taken by another person. Try again with a unique username since duplicate usernames cannot exist.</p>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/63f779e5-f820-48ff-9c7b-9ae117be02c4" alt="image"></p>
+<ul>
+<li>
+<h3>Unsuccessful Sign up: Username length</h3>
+</li>
+</ul>
+<p>If you keep seeing an error message in red stating &quot;Username must be between 6 and 25 characters.&quot; that means that the username you are entering currently does not meet the length requirements for a username. A username must be between 6 and 25 characters. Try again with an other username that meets the length requirements.</p>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/32229e26-e1f4-4122-9cdd-fdf77c93ff37" alt="image"></p>
+<ul>
+<li>
+<h3>Unsuccessful Sign up: Password Length</h3>
+</li>
+</ul>
+<p>If you keep seeing an error in red stating &quot;Password must be between 8 and 25 characters.&quot; that means your password is not meeting the length requirements. A password must be between 8 and 25 characters. Try again with proper password that meets this length requirement.</p>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/76061892-f6cf-4cf7-b600-b93a16b296e1" alt="image"></p>
+<ul>
+<li>
+<h3>Unsuccessful Sign up: Passwords Do Not Match</h3>
+</li>
+</ul>
+<p>If you keep seeing an error message stating &quot;Passwords do not match.&quot; that means the password you input in the <em>password</em> field does not match the password you typed in the <em>Repeat Password</em> field. Try typing the password again in both field and make sure the passwords match.</p>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/7e25d0ef-6c0f-4759-bd13-26ef7d2606ae" alt="image"></p>
+<ul>
+<li>
+<h3>Unsuccessful Sign up: Multiple Managers</h3>
+</li>
+</ul>
+<p>If you see an error message stating &quot;Error: There can only be one manager user.&quot; that means you are trying to create another manager user while a manager already exists in the system. More than one admin cannot manage the system. Use the already created manager credentials.</p>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/e82a1ecd-d28a-41c2-bceb-4d2d455142eb" alt="image"></p>
+<h2>Login</h2>
+<p>At this stage, the user guide assumes that you have successfully created a user account either as a <em>Customer</em>, Barista, or <em>Manager</em>. Click on the &quot;Already have an account? Login&quot; link on the sign up form after signing up for an account to be redirected to the login page.</p>
+<ul>
+<li>
+<h3>Successful Login</h3>
+</li>
+</ul>
+<p>On the login form, input your credentials: <em>Username</em> and <em>Password</em> and click the &quot;Login&quot; button. Upon successful login, you will be taken to your corresponding homepage depending on if you are a customer, barista, or manager.</p>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/84ffc576-7d9f-446f-9e51-017047fc06da" alt="image"></p>
+<ul>
+<li>
+<h3>Successful Login: Customer</h3>
+</li>
+</ul>
+<p>Upon successful login a customer would be directed to the following page:</p>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/157c55bc-da37-479f-889b-66dc1db9fc92" alt="image"></p>
+<ul>
+<li>
+<h3>Successful Login: Barista</h3>
+</li>
+</ul>
+<p>Upon successful login a barista would be directed to the following page:</p>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/ffaa48df-c72f-494f-8514-b40bfceb1d88" alt="image"></p>
+<ul>
+<li>
+<h3>Successful Login: Manager</h3>
+</li>
+</ul>
+<p>Upon successful login a manager would be directed to the following page:</p>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/9f5eb817-3871-48d9-9154-694f0c0cdcc7" alt="image"></p>
+<ul>
+<li>
+<h3>Successful Login: Guest</h3>
+</li>
+</ul>
+<p>If a customer would like to anonymously place an order without signing up for an account, they can do so by clicking on &quot;Continue as Guest&quot; on the login form. Upon successfully logging in as a guest into the system you will see the following page as a guest user:</p>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/b90ad646-e0ff-4c54-9641-e3f2bda10940" alt="image"><br>
+<img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/3534f8e2-c339-44fc-a011-9b12df9465bb" alt="image"></p>
+<ul>
+<li>
+<h3>Unsuccessful Login: Incorrect Username or Password</h3>
+</li>
+</ul>
+<p>If you see an error stating &quot;Username or Password fields are incorrect.&quot; that means you are inputting the password or username incorrectly. Try again with the correct credentials. If the error persists, that means you have not registered an account yet. Please proceed to the sign up form and follow the instructions above to sign up for an account.</p>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/af9d7083-6865-4618-ab52-9b02288f7200" alt="image"></p>
+<h2>Manager</h2>
+<p>In this section, the user guide goes over the different functionalities a manager user has access to.<br>
+Prerequisites: Sign up as a manager, and log in as a manager</p>
+<ul>
+<li>
+<h3>Add Ingredient</h3>
+</li>
+</ul>
+<ol>
+<li>On the manager options page, click the &quot;Add Ingredient&quot; option.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/256740fe-7a0c-40cb-a859-af2dce64dcb5" alt="image"></p>
+<ol start="2">
+<li>In the <em>Name</em> field, type the name of the ingredient you are wanting to add to the inventory. In the <em>Amount</em> field, add the amount of the ingredient you want to add to the inventory.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/96f38b45-c3cf-4e31-bab9-5c2345475187" alt="image"></p>
+<ol start="3">
+<li>
+<p>Click the &quot;Add Ingredient&quot; button to add the ingredient to the inventory. If you receive the message stating &quot;Success: Ingredient Added!&quot; that indicates an ingredient has been added to the inventory successfully.</p>
+</li>
+<li>
+<p>Repeat 1-2 again to add more ingredients.</p>
+</li>
+</ol>
+<p>Note: Negative ingredient or empty input fields are not valid thus the system will reject them.</p>
+<ul>
+<li>
+<h3>Update Inventory</h3>
+</li>
+</ul>
+<ol>
+<li>On the manager options page, click the &quot;Update Inventory&quot; option.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/44c893f5-dd47-42be-a9a9-787a783c1d9d" alt="image"></p>
+<ol start="2">
+<li>You can view the current inventory in the &quot;View Inventory&quot; view of the Update Inventory form</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/eaa18996-2aa9-4e11-b0a5-2141e3e3d84e" alt="image"></p>
+<ol start="3">
+<li>To update the inventory, add the new ingredient amount you want to add to the current inventory into the field that says &quot;Enter Ingredient Quantity&quot;.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/5eb708ad-444d-4224-a868-bb6ae420512c" alt="image"></p>
+<ol start="4">
+<li>
+<p>Click &quot;Update Inventory&quot; button. If you receive the message stating &quot;Success: Inventory Added!&quot; that indicates inventory has been updated successfully. The updated ingredient amounts will be shown in the &quot;View Inventory&quot; view.</p>
+</li>
+<li>
+<p>In order to only update one specific ingredient quantity and not all of them, you can enter zeros in all other fields.</p>
+</li>
+</ol>
+<p>Note: Adding negative amounts is invalid thus the system will reject them</p>
+<ul>
+<li>
+<h3>Edit Recipe</h3>
+</li>
+</ul>
+<ol>
+<li>On the manager options page, click the &quot;Edit Recipe&quot; option.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/e33ad01c-92b8-451d-a952-ff521dedc681" alt="image"></p>
+<ol start="2">
+<li>Select the desired Recipe you want to edit from the drop-down menu</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/4484b962-b1bf-423e-96a3-5c4e03696a62" alt="image"></p>
+<ol start="3">
+<li>The selected recipe will be populated with recipe details. Here you can edit any ingredient quantities or the price of the recipes as well as remove any ingredients or add additional ingredients to the recipe.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/a3bd0c84-799a-49b3-84ab-9532b4772d59" alt="image"></p>
+<ol start="4">
+<li>Click the &quot;Edit Recipe&quot; button once desired edits have taken place. If you receive the message stating &quot;Success: Recipe Edited!&quot; that indicates that the system has successfully edited the recipe.</li>
+</ol>
+<p>Note: If you do not enter positive integers for price and ingredient quantities, the system will reject that invalid request. You also can not edit the recipe and remove all the ingredients from the recipe as the system will also reject this invalid request. A recipe cannot contain duplicate ingredients either.</p>
+<ul>
+<li>
+<h3>Delete Recipe</h3>
+</li>
+</ul>
+<ol>
+<li>On the manager options page, click the &quot;Delete Recipe&quot; option.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/c52dd707-41bc-4458-a8ac-cb9281a1054a" alt="image"></p>
+<ol start="2">
+<li>Select the desired recipe you want to delete from the system or select the &quot;Delete all recipes?&quot; option to delete all recipes from the system.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/78361a2d-5f80-4cd8-8036-0f2d089fc7ad" alt="image"></p>
+<ol start="3">
+<li>Click the &quot;Delete&quot; button. If you receive a message stating &quot;Recipe deleted successfully&quot; that indicates that you have deleted the desired recipe from the system.</li>
+</ol>
+<ul>
+<li>
+<h3>View Orders</h3>
+</li>
+</ul>
+<ol>
+<li>On the manager options page, click the &quot;View Orders&quot; option</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/978e09f2-a3ce-465c-b2db-d9544c643656" alt="image"></p>
+<ol start="2">
+<li>Here you can view all orders that have taken place in the system, along with all the necessary information associated with each order for managerial purposes.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/ca1374bb-6c35-4a2d-a389-5e978b699781" alt="image"></p>
+<ol start="3">
+<li>
+<p>You can also view the total revenue that has been generated through all the orders in the system. Revenue only starts to count when an order's status changes to <em>READYFORPICKUP</em>.</p>
+</li>
+<li>
+<p>To provide easy order history management, you can filter orders by status, price, and date.</p>
+</li>
+</ol>
+<h2>Barista</h2>
+<p>In this section, the user guide goes over the different functionalities a barista user has access to.<br>
+Prerequisites: Sign up as a barista, and log in as a barista</p>
+<ul>
+<li>
+<h3>Add a Recipe</h3>
+</li>
+</ul>
+<ol>
+<li>On the barista options page, click the &quot;Add a Recipe&quot; option.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/7fd494be-0c26-4dee-9f50-a2f7786bd5d9" alt="image"></p>
+<ol start="2">
+<li>In the input fields, enter the name of the recipe, the price of the recipe, and select the ingredients by clicking on the desired ingredient and entering the quantity of the ingredients.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/63d6796e-de9a-49b0-af81-1a28ae0c5551" alt="image"></p>
+<ol start="3">
+<li>
+<p>If you wish to remove any ingredients from the recipe, click the X button.</p>
+</li>
+<li>
+<p>To add the recipe to the system, click the &quot;Create Recipe&quot; button. If you receive a message stating &quot;Success: Recipe Created&quot; that indicates that your recipe was successfully added to the system.</p>
+</li>
+</ol>
+<p>Note: If you do not enter a positive integer for the ingredient quantity or price of the recipe, the system will reject that request because that is an invalid request. A recipe cannot contain duplicate ingredients either.</p>
+<ul>
+<li>
+<h3>Fulfill Orders</h3>
+</li>
+</ul>
+<ol>
+<li>On the barista options page, click the &quot;Fulfill Orders&quot; option.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/63f1db3c-d6ad-46e5-b0a4-b13a106848bf" alt="image"></p>
+<ol start="2">
+<li>If there are pending orders for customers, you will see the order number for it and the menu items customer ordered.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/ba05b2d4-1bf4-4174-9e34-d1bb8d3d10cb" alt="image"></p>
+<ol start="3">
+<li>
+<p>To fulfill the order click the &quot;Fulfill Order&quot; button. If you see a message stating &quot;Order Fulfilled Successfully!&quot; that indicates the customer's order has been fulfilled.</p>
+</li>
+<li>
+<p>If you see an error message, that means orders cannot be fulfilled because the inventory to make the recipe is low and the customer order is rejected.</p>
+</li>
+<li>
+<p>If you see a message stating &quot;No pending orders at the moment.&quot; on the <em>Barista Order Fulfillment</em> view that means you have no orders to process yet.</p>
+</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/58c2c5cb-2878-49bb-8bdd-fcc815e80483" alt="image"></p>
+<h2>Customer</h2>
+<p>In this section, the user guide goes over the different functionalities a customer user has access to.<br>
+Prerequisites: Sign up as a customer, and log in as a customer</p>
+<ul>
+<li>
+<h3>Place Order</h3>
+</li>
+</ul>
+<ol>
+<li>On the customer options page, click the &quot;Place Order&quot; option.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/5052c3a4-19cb-480e-ae3c-4cdcdf799c76" alt="image"></p>
+<ol start="2">
+<li>The menu shows available menu items along their prices and the ingredients in the recipe.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/2e40b66e-2956-4f84-adc5-7cf6ad89c845" alt="image"></p>
+<ol start="3">
+<li>Select the desired recipe you want to order from the menu and click &quot;Add to Order&quot;.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/3ed9525f-b1f8-4702-ad6a-de3d68c5863d" alt="image"></p>
+<ol start="4">
+<li>
+<p>The recipe you selected will be populated with information like the price in the cart panel. Enter the quantity of the menu item to indicate how many you will like to add to your order or remove the item if not wanted anymore by clicking the &quot;Remove&quot; button.</p>
+</li>
+<li>
+<p>To checkout, input the payment amount in the <em>Payment</em> field and click the &quot;Checkout&quot; button.</p>
+</li>
+<li>
+<p>A message indicating order confirmation will pop-up and show you your change due.</p>
+</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/815fb500-7788-4d2f-bd87-585f1a5bb59c" alt="image"></p>
+<p>Note: All quantities must be positive integers and duplicate menu items cannot be added to the system otherwise, the system will reject an invalid request. In order for the system, to accept the payment, the payment amount must be greater than or equal to the amount owed.</p>
+<ul>
+<li>
+<h3>Order History</h3>
+</li>
+</ul>
+<ol>
+<li>On the customer options page, click the &quot;Order History&quot; option.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/c256cce1-76b4-4133-8c33-36c7a9daff00" alt="image"></p>
+<p>Then, you will be shown the following screen where &quot;awaleed&quot; is the customer's username:</p>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/ce0bf6d5-b587-4ccb-beca-eb01bc9009a6" alt="image"></p>
+<ol start="2">
+<li>
+<p>In the <em>Order History</em> view, you are able to view your order histories from the past including the most recent order just placed. You can view your order number, status, order details, price, the amount paid, time stamp, and the current status of your order. Before an order is made, the status will remain <em>Pending</em>.</p>
+</li>
+<li>
+<p>Once the order is ready (when fulfilled by a barista), the status will change to <em>READYFORPICKUP</em>.</p>
+</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/ab24c781-e7a0-4bda-a0ab-7c8b479c870a" alt="image"></p>
+<ol start="4">
+<li>To pick up the order, click on the pickup button in a <em>READYFORPICKUP</em> order like the first one above, and the order status will change to <em>PICKEDUP</em>.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/4594d9bf-f163-4de5-8be5-93f22fc2e54a" alt="image"></p>
+<ol start="5">
+<li>If an order status changes to <em>REJECTED</em>, that indicates the barista was not able to fulfill your order due to low inventory.</li>
+</ol>
+<p>Note: Customers can filter orders by status, price, and by date for easy management and access to their order history</p>
+<h2>Guest</h2>
+<ul>
+<li>
+<h3>Place Order</h3>
+</li>
+</ul>
+<ol>
+<li>On the guest options page, click the &quot;Place Order&quot; option.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/a20d4358-dd3f-456b-b527-3438c04f8ffa" alt="image"></p>
+<ol start="2">
+<li>The menu shows available menu items along their prices and the ingredients in the recipe.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/6fd59ea8-ad97-482b-9144-565d02ed5ce1" alt="image"></p>
+<ol start="3">
+<li>Select the desired recipe you want to order from the menu and click &quot;Add to Order&quot;.</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/24d2153b-21b6-45ff-9160-e447c0d8a4bd" alt="image"></p>
+<ol start="4">
+<li>
+<p>The recipe you selected will be populated with information like the price in the cart panel. Enter the quantity of the menu item to indicate how many you will like to add to your order or remove the item if not wanted anymore by clicking the &quot;Remove&quot; button.</p>
+</li>
+<li>
+<p>To checkout, input the payment amount in the <em>Payment</em> field and click the &quot;Checkout&quot; button.</p>
+</li>
+<li>
+<p>A message indicating order confirmation will pop-up and show you your change due.</p>
+</li>
+</ol>
+<p><img src="https://github.com/DLang42/CoffeeMaker/assets/47933368/d4322334-f96d-45e5-894e-a94dfd906fab" alt="image"></p>
+<p>Note: All quantities must be positive integers and duplicate menu items cannot be added to the system otherwise, the system will reject an invalid request. In order for the system, to accept the payment, the payment amount must be greater than or equal to the amount owed. It is also important to note that Guest users do not have access to order histories for privacy purposes. That is a perk only available to registered users.</p>
+
+        </article>
+    </main>
+    <footer>
+        <p id="content" class="center-text">Want to get in touch? Message me at <a rel="noreferrer noopener"
+                href="mailto:dylan.hk.lang@gmail.com" class="links">dylan.hk.lang@gmail.com</a>!</p>
+        <p id="content" class="center-text">&copy; 2021 - 2025 Dylan Lang</p>
+    </footer>
+</body>
+
+</html>
