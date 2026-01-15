@@ -5,7 +5,7 @@ module.exports = function (eleventyConfig) {
   // Copy CSS to output
   eleventyConfig.addPassthroughCopy("src/styles.css");
   // Copy images to output
-  eleventyConfig.addPassthroughCopy("src/_includes/images");
+  eleventyConfig.addPassthroughCopy("src/images");
   // Set default template engine
   eleventyConfig.setTemplateFormats(["html", "md", "liquid"]);
 
