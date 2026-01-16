@@ -16,7 +16,7 @@ The codebase is in {{techStack}}.
 
 ### Components
 
-The project guidelines require four components total, along with their dependencies as displayed in the figure below. Information with regards to each component will be listed below the figure, along with an indication of code provided.
+The project guidelines require four components total, along with their dependencies as displayed in the figure below. Information with regards to each component will be listed below the figure
 
 ![image](https://user-images.githubusercontent.com/47933368/179664327-98298f87-ae6d-45aa-82d4-0e50be1164c8.png) 
 
