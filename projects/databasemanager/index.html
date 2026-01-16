@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Manager</title>
+    <link rel="stylesheet" href="/styles.css">
+    <!-- <script src="./navigation.js"></script> -->
+</head>
+
+<body>
+    <header>
+        <!-- <div id="navBar"> -->
+        <a href="#home" class="nav-item">Home</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#contact" class="nav-item">Contact</a>
+        <!-- </div> -->
+    </header>
+    <main class="bodyDiv">
+        <!-- Main project information -->
+        <article>
+            <h1 class="center">Database Manager</h1>
+            <p class="big-text">Database manager for employees of a temporary agency</p>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/JNUGj6M7fhg?si=BsYsJuoAcBYc6L-N" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            
+            <!-- <p class="big-text">Tech stack/Technologies used: C</p> -->
+            <p>The Database Manager program is designed to maintain a database of employees that a temp agency can use to hire temporary employees. The program is capable of reading multiple files containing employee information and when displayed the user is able to see the employee’s name, ID, skills, and availability. This program also allows the use of assigning available employees to a new company, unassigning employees from their company, and displaying employees based off of certain skills or companies.</p>
+<h1>Design</h1>
+<h3>Tech Stack</h3>
+<p>The codebase is in C.</p>
+<h3>Commands:</h3>
+<p><strong>List:</strong> This command will simply list out all the employees that have been imported to the program. To use this command, just type <code>list</code></p>
+<p><strong>Assign:</strong> This command will let you assign an employee to a new company. To use this command, just type <code>assign &lt;employee ID&gt; &lt;company name&gt;</code></p>
+<p><strong>Unassign:</strong> This command will let you unassign an employee that is assigned to a company. To use this command, type <code>unassign &lt;employee ID&gt;</code></p>
+<p><strong>Quit:</strong> This command lets you exit the program. To use this command, just type <code>quit</code></p>
+<h1>Design</h1>
+<h3>Components</h3>
+<p>The project has three components total, along with their dependencies as displayed in the figure below. Information with regards to each component will be listed below the figure.</p>
+<p><img src="https://user-images.githubusercontent.com/47933368/179660451-244e8ffe-7035-4642-b221-54b3765594ed.png" alt="image"></p>
+<ul>
+<li>The <em><strong>input</strong></em> component is responsible for reading in the input from the user when selecting commands and is also used to help the database component read in employees from a file.</li>
+<li>The <em><strong>database</strong></em> component is responsible for creating and maintaining the database that contains all the employees and their information. When using the database manager, this component will read in all the input files and then create a database using the information from the files if formatted correctly and can then display this information to the user.</li>
+<li>The <em><strong>agency</strong></em> component is responsible for interacting with the user so they can use certain commands like assigning or unassigning employees. This component works with the input and database components to gather input from the user for the commands and allow for modifications to the database.</li>
+</ul>
+<h1>Implementation</h1>
+<p>The implementation of this project utilized the following techniques and decisions:</p>
+<ul>
+<li>To facilitate the quick sort algorithm, the sorting algorithm needs a basis at which to sort the employees. Since the employees can be sorted by either assignment or skill, then the behavior for that sorting algorithm needs to be defined. As such, pointer functions are used to compare skills and assignments to determine how the list should be sorted. The pointer functions are favorable here as they will provide the sorting instructions to the quick sort algorithm based on whether the user chooses to filter by skills or assignment.</li>
+<li>To imitate a database full of employees and their information, memory allocation was used to create a mock database. In addition, memory allocation was also used to create the employees.</li>
+<li>Both the employees and the database properties are defined in structs to simulate object oriented programming.<br>
+The pointer to pointer technique is utilized to ensure that when the memory allocated needs to be freed, a pointer will be used to traverse through the list of employees in the database while the other pointer will point to an employee that will be freed. This is to ensure that no memory access is lost and no memory has been left allocated upon successful execution of the program.</li>
+<li>Memory allocated strings are favored as opposed to a character array. This is to ensure that non allocated memory does not get accessed by the program. In addition, this allows the user to input commands that would otherwise cause the program to crash due to possibly long stringed commands.</li>
+</ul>
+
+        </article>
+    </main>
+    <footer>
+        <p id="content" class="center-text">Want to get in touch? Message me at <a rel="noreferrer noopener"
+                href="mailto:dylan.hk.lang@gmail.com" class="links">dylan.hk.lang@gmail.com</a>!</p>
+        <p id="content" class="center-text">&copy; 2021 - 2025 Dylan Lang</p>
+    </footer>
+</body>
+
+</html>
