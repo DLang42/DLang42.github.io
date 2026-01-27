@@ -80,7 +80,9 @@ main {
 
 h1,
 p,
-li {
+li,
+h2,
+h3 {
     color: #E0E0E0;
 }
 
@@ -108,7 +110,7 @@ body {
 }
 
 .links:hover {
-    color: teal;
+    color: #72ffff;
 }
 
 .big-p-text {
@@ -154,20 +156,23 @@ body {
 }
 
 .video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100) */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%; /* Prevents overflow on larger screens */
-  margin: 0 auto; /* Centers the container */
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio (9 / 16 * 100) */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    /* Prevents overflow on larger screens */
+    margin: 0 auto;
+    /* Centers the container */
 }
 
 .video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .home-section-title {
@@ -177,7 +182,8 @@ body {
     text-align: center;
 }
 
-.home-section-title::before, .home-section-title::after {
+.home-section-title::before,
+.home-section-title::after {
     content: "";
     display: block;
     width: 100%;
