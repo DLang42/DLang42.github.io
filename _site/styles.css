@@ -104,12 +104,16 @@ body {
     min-height: 100vh;
 }
 
-.links, a {
+a {
+    text-decoration: none;
+}
+
+.links {
     color: white;
     text-decoration-color: teal;
 }
 
-.links:hover, a {
+.links:hover {
     color: #72ffff;
 }
 
