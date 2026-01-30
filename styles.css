@@ -104,10 +104,6 @@ body {
     min-height: 100vh;
 }
 
-a {
-    text-decoration: none;
-}
-
 .links {
     color: white;
     text-decoration-color: teal;
