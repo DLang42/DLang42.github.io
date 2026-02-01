@@ -33,12 +33,9 @@
                 <div class="card">
                     <!-- <img src="{{ project.data.image }}" alt="{{ project.data.title }} screenshot" class="project-image"> -->
                     <h2 class="center">{{ project.data.title }}</h2>
-                    {% if project.data.video %}
-                    <div class="video-container">
-                        <iframe src="{{ project.data.video }}" title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
+                    {% if project.data.thumbnail %}
+                    <img src="{{ project.data.thumbnail }}" alt="{{ project.data.title }} screenshot"
+                        class="project-image">
                     {% endif %}
                     <!-- <caption class="center-text">Tech stack: {{ project.data.techStack }}</caption> -->
                     <p class="center-text">{{ project.data.caption }}</p>

@@ -3,6 +3,7 @@ layout: project_layout.html
 title: Wordle
 video: https://www.youtube.com/embed/wQKLmQ_c_5Q?si=NbTjucp8uQ2UZ1Rw
 learnMore: https://www.wikihow.com/Play-Wordle
+thumbnail: /images/wordle/thumbnail/wordle.png
 techStack: C
 tags: projects
 caption: Recreation of the popular word guessing game via command line

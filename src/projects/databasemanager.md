@@ -2,6 +2,7 @@
 layout: project_layout.html
 title: Database Manager
 video: https://www.youtube.com/embed/JNUGj6M7fhg?si=BsYsJuoAcBYc6L-N
+thumbnail: /images/databasemanager/thumbnail/databasemanager.png
 techStack: C
 tags: projects
 caption: Database manager for employees of a temporary agency

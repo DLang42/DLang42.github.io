@@ -1,6 +1,7 @@
 ---
 layout: project_layout.html
 title: Coffee Shop
+thumbnail: /images/coffeeshop/thumbnail/coffeeshop.png
 techStack: Java with Spring Boot, Angular, and MySQL
 tags: projects
 caption: Coffee Shop system for ordering and serving coffee
